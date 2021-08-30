@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+/* font-family: 'Bangers', cursive; */
+
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    padding: 0;
+    text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+a{
+    text-decoration: none;
+}
+.menu i {
+    font-size: 32px;
+}
+
+.menu a{
+    margin: 30px 0;
+    color: #000;
+}
+
+.page{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#p1{
+    width: 100%;
+    background: #419D78;
+    left: 0;
+}
+
+#p2{
+    background: #324C54;
+}
+
+#p3{
+    background: #FF3562;
+}
+
+#p2 , #p3{
+    width: 90%;
+    left: 10%;
+    transform: translateX(190%);   
+}
+
+.menu a{
+    transition: all .5s ease-in-out;
+    color: #3943B7;
+}
+
+.menu a:hover {
+    opacity: 0.5;
+  }
+
+.page {
+    font-family: 'Bangers', cursive;
+	color: #fff;
+    font-size: larger;
+    letter-spacing: 0.2em;
+}
+
+.page h2 {
+	font-size: 36px;
+	line-height: 2;
+}
+
+.page span {
+	font-size: 17px;
+}
+
+.page {
+	transition: all .6s cubic-bezier(.5, .2 , .2 , 1.1); 
+}
+
+#t2:target #p2,
+#t3:target #p3{
+  transform: translateX(0%);
+  transition-delay: .4s !important;
+}
+
+#t2:target #p1, 
+#t3:target #p1{
+  background: black;
+	filter: blur(3px)
+}
+
+#t2:target .menu a,
+#t3:target .menu a{
+  transform: scale(.6);
+  transition-delay: .25s;
+}
+
+#t2:target .menu .two,
+#t3:target .menu .three{
+  transform: scale(1.2);
+}
+
+.page .wrap {
+	width: 50%;
+    transform: translateX(200%);
+    transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+}
+
+.page#p1 .wrap {
+    transform: translateX(0%);
+}
+
+#t2:target .page#p2 .wrap,
+#t3:target .page#p3 .wrap {
+  transform: translateX(0);
+  transition-delay: 1s;
+}
+
+footer{
+    margin-top: 1rem;
+}
+
+footer a{
+    color: #0E0E52;
+    margin: 0.2rem;  
+}
+footer a i{
+    font-size: 32px;
+}
